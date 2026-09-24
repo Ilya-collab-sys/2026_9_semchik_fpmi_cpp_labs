@@ -3,37 +3,33 @@
 
 #include <iostream>
 using namespace std;
-int main()
 
-{int i = 1, m = 0, b = 0, f = 0, n;
-    cin >> n;
-    
-    bool is_Palindrome(int i) {
-        int c = i;
-        int d = pow(i, 2);
-        while (int c > 0) {
-            int a = c % 10;
-            int b = b * 10 + a;
-            c = c / 10;
-        }
-        while (d > 0) {
-            int e = d % 10;
-            int f = f * 10 + e;
-            d = d / 10;
-        }
-        if (!(i == int b && pow(i, 2) == int f)) {
-            return false;
-        }
-        return true;
+bool is_Palindrome(int k) {
+    int b = 0;
+    int c = k;
+    while (c > 0) {
+        int a = c % 10;
+        b = b * 10 + a;
+        c = c / 10;
     }
+    if (b != k) {
+        return false;
+    }
+    return true;
+}
 
-    
-     while (m<=n){
-         if (is_Palindrome(i)) {
-             cout << i << ' ';
-         }
-         i = i + 1;
-         m = m + 1;
+int main()  {
+    int k = 1, m = 0, n;
+    cin >> n;
+
+    while (m<n){
+
+        if (is_Palindrome (k) && is_Palindrome (k*k)) {
+            cout << k << ' '; 
+            m = m + 1;
+        }
+        k = k + 1;
+       
         
     }
     return 0;
