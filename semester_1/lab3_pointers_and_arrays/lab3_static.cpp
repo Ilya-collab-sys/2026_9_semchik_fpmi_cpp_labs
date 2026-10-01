@@ -3,7 +3,7 @@
 // static arrays
 int main() {
 	int i, n, m=0;
-	int a[5] = { 6, 5, 8, 9, 3 };
+	int a[5] = { 8, 5, 3, 6, 2 };
 	int* p = &a[0];
 	std :: cin >> n;
 	for (i=0; i<5; i++){
