@@ -5,7 +5,7 @@ void Delete(int* arr, int size, int m) {
     int k = 0;
     for (int i = 0; i < size; i++) {
 
-        if (arr[i] == m) {
+        if (abs(arr[i]) == abs(m)) {
             arr[size] = 0;
             k = k + 1;
         }
