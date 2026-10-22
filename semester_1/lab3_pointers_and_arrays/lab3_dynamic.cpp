@@ -22,10 +22,11 @@ void Delete(int* arr, int size, int m) {
     int main (){
     int n;
     int a[5] = { 4, 5, 6, 7, 8 };
+    int *array = new int[5]{ 4, 5, 6, 7, 8 };    
     std::cin >> n;
    
-    Delete(a, 5, n);
+    Delete(array, 5, n);
     
-    delete[] a;
+    delete[] array;
     return 0;
 }
