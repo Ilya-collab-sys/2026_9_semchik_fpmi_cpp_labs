@@ -8,7 +8,7 @@ int main() {
 	std :: cin >> n;
 	for (i=0; i<5; i++){
 		if (abs(p[i]) == abs(n)) {
-			m = m + 1;
+			m+=1;
 		}
 		else
 			std::cout << p[i]<<' ';	    
