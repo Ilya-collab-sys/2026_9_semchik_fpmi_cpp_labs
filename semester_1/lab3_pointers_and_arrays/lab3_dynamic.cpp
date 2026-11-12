@@ -6,8 +6,7 @@ void Delete(int* arr, int size, int m) {
     for (int i = 0; i < size; i++) {
 
         if (abs(arr[i]) == abs(m)) {
-            arr[size] = 0;
-            k = k + 1;
+            k+=1;
         }
         else
             std::cout << arr[i]<<' ';
