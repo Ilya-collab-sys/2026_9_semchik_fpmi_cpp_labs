@@ -5,49 +5,37 @@
 
 int main()
 {
-    int j;
-    int matrix[2][6] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-    std::cout << "matrix[2][6] = { ";
-    for (j = 0; j < 6; j++) {
-        std::cout << *(&matrix[0][j]) << ' ';
+    int n, m, sum1=0, sum2=0;
+    int arr1[5], arr2[5] ;
+    std::cin >> n;
+    for (int i=0; i<n; i++){
+        std::cin >> arr1[i];
+        sum1 += *(&arr1[i]);
     }
-    for (j = 0; j < 6; j++) {
-        std::cout << *(&matrix[1][j]) << ' ';
+    for (int j = 0; j < n; j++) {
+        std::cin >> arr2[j];
+        sum2 += *(&arr2[j]);
     }
-    std::cout << '}'<<' ';
-    int sum1 = 0;
-    int sum2 = 0;
-    for (j = 0; j < 6; j++) {
-        int x = *(&matrix[0][j]);
-        sum1 = sum1 + x;
-    }
-    std::cout << sum1 << ' ';
-    for (j = 0; j < 6; j++) {
-        int y = *(&matrix[1][j]);
-        sum2 = sum2 + y;
-    }
-    std::cout << sum2<<' ';
-    std::cout << "new_matrix = { ";
     if (sum1 >= sum2) {
-
-        for (j = 0; j < 6; j++) {
-            std::cout << *(&matrix[0][j]) << ' ';
+        std::cout << "matrix [][] = { ";
+        for (int i = 0; i < n; i++) {
+            std::cout << arr1[i] << ' ';
         }
-        for (j = 0; j < 6; j++) {
-            std::cout << *(&matrix[1][j]) << ' ';
+        for (int j = 0; j < n; j++) {
+            std::cout << arr2[j] << ' ';
         }
+        std::cout << "}";
     }
-    else
-    {
-
-        for (j = 0; j < 6; j++) {
-            std::cout << *(&matrix[1][j]) << ' ';
+    if (sum1 < sum2) {
+        std::cout << "matrix [][] = { ";
+        for (int j = 0; j < n; j++) {
+            std::cout << arr2[j] << ' ';
         }
-        for (j = 0; j < 6; j++) {
-            std::cout << *(&matrix[0][j]) << ' ';
+        for (int i = 0; i < n; i++) {
+            std::cout << arr1[i] << ' ';
         }
+        std::cout << "}";
     }
-    std::cout << '}';
     return 0;
 }
 
