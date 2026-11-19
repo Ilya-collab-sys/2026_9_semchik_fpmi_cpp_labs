@@ -1,12 +1,15 @@
 
 // solve task with usage of
 // dymanic arrays
+#include <iostream>
+
 void Delete(int* arr, int size, int m) {
     int k = 0;
     for (int i = 0; i < size; i++) {
 
         if (abs(arr[i]) == abs(m)) {
-            k+=1;
+            arr[size] = 0;
+            k = k + 1;
         }
         else
             std::cout << arr[i]<<' ';
@@ -19,13 +22,16 @@ void Delete(int* arr, int size, int m) {
     }
 
     int main (){
-    int n;
-    int a[5] = { 4, 5, 6, 7, 8 };
-    int *array = new int[5]{ 4, 5, 6, 7, 8 };    
-    std::cin >> n;
-   
-    Delete(array, 5, n);
     
+    int arr[20], n, k;
+    int *array = new int[20];
+    std::cin >> n>>k;
+    for (int i=0; i<n; i++){
+        std::cin >> array[i];
+    }
+    std::cout << "arr[] = { ";
+    Delete(array, n, k);
+    std::cout << "}";
     delete[] array;
     return 0;
 }
