@@ -15,7 +15,7 @@ int main()
 	for (int i = 0; i < n; i++) {
 		if (abs(arr[i]) == abs(k)) {
 			m += 1;
-		}
+		}else
 	
 		std::cout << arr[i] << ' ';
 	}
