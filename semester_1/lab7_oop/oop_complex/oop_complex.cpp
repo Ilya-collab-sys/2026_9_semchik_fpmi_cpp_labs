@@ -2,7 +2,7 @@
 
 #include <cmath>
 
-    class Complex {
+class Complex {
         double a, b;
         const double i=sqrt(-1);
         void Cin() {
