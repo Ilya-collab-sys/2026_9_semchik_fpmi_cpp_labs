@@ -3,7 +3,7 @@
 #include <cmath>
 
 class Complex {
-     double a, b;
+        double a, b;
         const double i=sqrt(-1);
         void Cin() {
             std::cin >> a >> b;
